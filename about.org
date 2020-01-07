@@ -1,5 +1,0 @@
-#+TITLE: About
-
-* About Melp
-
-  Noone.
