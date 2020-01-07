@@ -1,0 +1,55 @@
+#+TITLE:       Transaction Isolation Level
+#+AUTHOR:      Melp
+#+EMAIL:       coolvimer
+#+DATE:        2019-10-28
+#+URI:         /blog/2019/10/28/transaction-isolation-level
+#+KEYWORDS:    <TODO: insert your keywords here>
+#+TAGS:        database, concurrency
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: mysql transaction isolation level
+** 前言
+
+   最近再看数据库理论方面的书，在此写下我对事务隔离级别的理解。
+
+   首先，数据库系统在实现 transaction 时，需要让它满足 ACID 条件。其中 Isolation 指 一个事务的运行结果在事务完成之前，其他事务通常是不可见的。
+   但由于要做到完全的不可见，代价是比较大的（花费比较多的系统资源，降低并发度，增加复杂度等），因此定义了隔离级别（Isolation Level）来增加系统的灵活
+   性，在不同的业务场景可以选择不同的隔离级别。
+
+   事务的隔离是通过 [[https://en.wikipedia.org/wiki/Concurrency_control][concurrency controll ]]来实现的，根据哪些并发副作用（脏读 dirty read, 幻读 phantom read， 不可重读 non repeatable read)
+   可以被允许来定义隔离级别。隔离级别越高，所允许的副作用越少, 但并发数也较低。
+
+** 四种隔离级别
+
+*** Read uncommitted.
+
+    事务可以读取到其他事务还未提交（commit) 的数据更改。
+
+    这会导致:
+
+    脏读（dirty read), 即事务读到了其他事务未提交并且最终被 Rollback 的数据更改;
+
+    不可重读 (non repeatable read), 即同一个事务中,针对同一行的两次读取操作结果不同;
+
+    幻读 （phantom read), 实际上是不可重读的一种特殊情况, 即同一个事务中，两次相同条件的 range query(多行读）得到不同的结果。
+    这种情况发生的场景是当另一个事务新增了符合上述条件的行或者删除了原有的行，而且该新增和删除操作发生在第二次读取操作之前。
+
+*** Read committed.
+
+    事务只能读取到其他事务已经提交了的更改。
+
+    不存在 dirty read 副作用。但是依然存在 non repeatable read 和 phantom read 副作用。
+
+*** Repeatable read.
+
+    只存在 phantom read 副作用。
+
+*** Serializable.
+
+    不存在任何并发副作用。
+
+*** 参考资料
+
+    1. [[https://en.wikipedia.org/wiki/Isolation_(database_systems)#Phantom_reads][Isolation]] 
+    2. [[https://book.douban.com/subject/10443458/][High Performance Mysql]]
+    3. [[https://docs.microsoft.com/en-us/sql/connect/jdbc/understanding-isolation-levels?view=sql-server-ver15][understanding isolation levels]] 

@@ -1,0 +1,40 @@
+#+TITLE:       Basic Graph Algorithms
+#+AUTHOR:      melp
+#+EMAIL:       coolvimer@gmail.com
+#+DATE:        2020-01-07 二
+#+URI:         /blog/2010/01/07/basic-graph-algorithms
+#+KEYWORDS:    <TODO: insert your keywords here>
+#+TAGS:        data-structures
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: basic graph algo
+* Graph data structure 表示
+** edge list
+** adjacency list
+** adjacency map
+** adjacency matrix
+   
+* Concepts about graph 
+
+** Graph Is /Connected/
+   For any two vertices, there is a path between them.
+   
+** Graph H is the /subgraph/ of Graph G
+   The vertices and edges of Subgraph H are subsets of the vertices and edges of Graph G.
+   
+** Graph H is the /spanning subgraph/ of Graph G
+   Subgraph H contains all vertices of graph G.
+   
+** Forest
+   Graph without cycles.
+   
+** Tree
+   Connected graph without cycles.
+   
+** Spanning Tree
+   A spanning tree of a graph is a spanning subgraph that is a tree.
+   
+* Graph 相关算法
+** Depth First Search
+** Breadth First Search
+** Topological Ordering
