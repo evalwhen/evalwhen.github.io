@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Basic Graph Algorithms - Melp</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="melp" />
+    <meta name="description" content="basic graph algo" />
+    <meta name="keywords" content="&lt;TODO: insert your keywords here&gt;" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/media/img/favicon.ico">
+
+  </head>
+
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Melp</a></h1>
+        <p>Learn By Doing</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/evalwhen" target="_blank">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="evalwhen.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>Basic Graph Algorithms</h1>
+<div id="outline-container-org77c64a1" class="outline-2">
+<h2 id="org77c64a1">Graph data structure 表示</h2>
+<div class="outline-text-2" id="text-org77c64a1">
+</div>
+<div id="outline-container-orgbd172a1" class="outline-3">
+<h3 id="orgbd172a1">edge list</h3>
+</div>
+<div id="outline-container-org8a000bb" class="outline-3">
+<h3 id="org8a000bb">adjacency list</h3>
+</div>
+<div id="outline-container-org01024d8" class="outline-3">
+<h3 id="org01024d8">adjacency map</h3>
+</div>
+<div id="outline-container-org3465cdd" class="outline-3">
+<h3 id="org3465cdd">adjacency matrix</h3>
+</div>
+</div>
+
+<div id="outline-container-org51776ac" class="outline-2">
+<h2 id="org51776ac">Concepts about graph</h2>
+<div class="outline-text-2" id="text-org51776ac">
+</div>
+<div id="outline-container-orga3b1f27" class="outline-3">
+<h3 id="orga3b1f27">Graph Is <i>Connected</i></h3>
+<div class="outline-text-3" id="text-orga3b1f27">
+<p>
+For any two vertices, there is a path between them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge08d4f6" class="outline-3">
+<h3 id="orge08d4f6">Graph H is the <i>subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-orge08d4f6">
+<p>
+The vertices and edges of Subgraph H are subsets of the vertices and edges of Graph G.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf15f0d1" class="outline-3">
+<h3 id="orgf15f0d1">Graph H is the <i>spanning subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-orgf15f0d1">
+<p>
+Subgraph H contains all vertices of graph G.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfc659ae" class="outline-3">
+<h3 id="orgfc659ae">Forest</h3>
+<div class="outline-text-3" id="text-orgfc659ae">
+<p>
+Graph without cycles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1aa4e48" class="outline-3">
+<h3 id="org1aa4e48">Tree</h3>
+<div class="outline-text-3" id="text-org1aa4e48">
+<p>
+Connected graph without cycles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaf80b31" class="outline-3">
+<h3 id="orgaf80b31">Spanning Tree</h3>
+<div class="outline-text-3" id="text-orgaf80b31">
+<p>
+A spanning tree of a graph is a spanning subgraph that is a tree.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdaeaeb8" class="outline-2">
+<h2 id="orgdaeaeb8">Graph 相关算法</h2>
+<div class="outline-text-2" id="text-orgdaeaeb8">
+</div>
+<div id="outline-container-org2c8305d" class="outline-3">
+<h3 id="org2c8305d">Depth First Search</h3>
+</div>
+<div id="outline-container-org1d8e747" class="outline-3">
+<h3 id="org1d8e747">Breadth First Search</h3>
+</div>
+<div id="outline-container-org0708161" class="outline-3">
+<h3 id="org0708161">Topological Ordering</h3>
+</div>
+</div>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2020-01-07</span>
+        <span title="last modification date" class="post-info">2020-01-07</span>
+        <span title="tags" class="post-info"><a href="/tags/data-structures/">data-structures</a></span>
+        <span title="author" class="post-info">melp</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2010/01/07/basic-graph-algorithms";
+          var disqus_url = "https://evalwhen.github.io/blog/2010/01/07/basic-graph-algorithms";
+          var disqus_shortname = 'coolvimer';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:coolvimer &lt;at&gt; gmail &lt;dot&gt; com">melp</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
