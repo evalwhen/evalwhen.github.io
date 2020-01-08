@@ -34,76 +34,76 @@
 <div>
 <div class="post">
 <h1>Basic Graph Algorithms</h1>
-<div id="outline-container-orgf23ece6" class="outline-2">
-<h2 id="orgf23ece6">Graph data structure 表示</h2>
-<div class="outline-text-2" id="text-orgf23ece6">
+<div id="outline-container-orgeaee4be" class="outline-2">
+<h2 id="orgeaee4be">Graph data structure 表示</h2>
+<div class="outline-text-2" id="text-orgeaee4be">
 </div>
-<div id="outline-container-org2a71646" class="outline-3">
-<h3 id="org2a71646">edge list</h3>
+<div id="outline-container-orgb6e8264" class="outline-3">
+<h3 id="orgb6e8264">edge list</h3>
 </div>
-<div id="outline-container-orgbc50bd7" class="outline-3">
-<h3 id="orgbc50bd7">adjacency list</h3>
+<div id="outline-container-orgbeb1745" class="outline-3">
+<h3 id="orgbeb1745">adjacency list</h3>
 </div>
-<div id="outline-container-orgaea8335" class="outline-3">
-<h3 id="orgaea8335">adjacency map</h3>
+<div id="outline-container-org158bff3" class="outline-3">
+<h3 id="org158bff3">adjacency map</h3>
 </div>
-<div id="outline-container-org87725bb" class="outline-3">
-<h3 id="org87725bb">adjacency matrix</h3>
+<div id="outline-container-orgf5d7b47" class="outline-3">
+<h3 id="orgf5d7b47">adjacency matrix</h3>
 </div>
 </div>
 
-<div id="outline-container-org2d69087" class="outline-2">
-<h2 id="org2d69087">Concepts about graph</h2>
-<div class="outline-text-2" id="text-org2d69087">
+<div id="outline-container-orged02b35" class="outline-2">
+<h2 id="orged02b35">Concepts about graph</h2>
+<div class="outline-text-2" id="text-orged02b35">
 </div>
-<div id="outline-container-org33f86f2" class="outline-3">
-<h3 id="org33f86f2">Graph Is <i>Connected</i></h3>
-<div class="outline-text-3" id="text-org33f86f2">
+<div id="outline-container-org85f6ef8" class="outline-3">
+<h3 id="org85f6ef8">Graph Is <i>Connected</i></h3>
+<div class="outline-text-3" id="text-org85f6ef8">
 <p>
 For any two vertices, there is a path between them.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga217e22" class="outline-3">
-<h3 id="orga217e22">Graph H is the <i>subgraph</i> of Graph G</h3>
-<div class="outline-text-3" id="text-orga217e22">
+<div id="outline-container-org15ec099" class="outline-3">
+<h3 id="org15ec099">Graph H is the <i>subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-org15ec099">
 <p>
 The vertices and edges of Subgraph H are subsets of the vertices and edges of Graph G.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgedee5f4" class="outline-3">
-<h3 id="orgedee5f4">Graph H is the <i>spanning subgraph</i> of Graph G</h3>
-<div class="outline-text-3" id="text-orgedee5f4">
+<div id="outline-container-org5c3c2a3" class="outline-3">
+<h3 id="org5c3c2a3">Graph H is the <i>spanning subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-org5c3c2a3">
 <p>
 Subgraph H contains all vertices of graph G.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb35d33d" class="outline-3">
-<h3 id="orgb35d33d">Forest</h3>
-<div class="outline-text-3" id="text-orgb35d33d">
+<div id="outline-container-org6a2df00" class="outline-3">
+<h3 id="org6a2df00">Forest</h3>
+<div class="outline-text-3" id="text-org6a2df00">
 <p>
 Graph without cycles.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org83e623e" class="outline-3">
-<h3 id="org83e623e">Tree</h3>
-<div class="outline-text-3" id="text-org83e623e">
+<div id="outline-container-org8672361" class="outline-3">
+<h3 id="org8672361">Tree</h3>
+<div class="outline-text-3" id="text-org8672361">
 <p>
 Connected graph without cycles.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org51220e5" class="outline-3">
-<h3 id="org51220e5">Spanning Tree</h3>
-<div class="outline-text-3" id="text-org51220e5">
+<div id="outline-container-orgb308191" class="outline-3">
+<h3 id="orgb308191">Spanning Tree</h3>
+<div class="outline-text-3" id="text-orgb308191">
 <p>
 A spanning tree of a graph is a spanning subgraph that is a tree.
 </p>
@@ -111,18 +111,72 @@ A spanning tree of a graph is a spanning subgraph that is a tree.
 </div>
 </div>
 
-<div id="outline-container-org89d7021" class="outline-2">
-<h2 id="org89d7021">Graph 相关算法</h2>
-<div class="outline-text-2" id="text-org89d7021">
+<div id="outline-container-org9f637b2" class="outline-2">
+<h2 id="org9f637b2">Graph 相关算法</h2>
+<div class="outline-text-2" id="text-org9f637b2">
 </div>
-<div id="outline-container-org54483d0" class="outline-3">
-<h3 id="org54483d0">Depth First Search</h3>
+<div id="outline-container-orgec5a646" class="outline-3">
+<h3 id="orgec5a646">Depth First Search</h3>
 </div>
-<div id="outline-container-orgba0b84d" class="outline-3">
-<h3 id="orgba0b84d">Breadth First Search</h3>
+<div id="outline-container-org4ef0a37" class="outline-3">
+<h3 id="org4ef0a37">Breadth First Search</h3>
 </div>
-<div id="outline-container-org6442fb3" class="outline-3">
-<h3 id="org6442fb3">Topological Ordering</h3>
+<div id="outline-container-org807ce21" class="outline-3">
+<h3 id="org807ce21">Topological Ordering</h3>
+<div class="outline-text-3" id="text-org807ce21">
+</div>
+<div id="outline-container-org7b4f229" class="outline-4">
+<h4 id="org7b4f229">算法思路</h4>
+<div class="outline-text-4" id="text-org7b4f229">
+<p>
+因为图(DAG)是无环的，图中必定至少存在一个 root 顶点（in-degree is zero)。
+如果删除 root 顶点以及它的出边（outgoing edges), 那么剩下的图也必定是
+无环的, 即必定存在 root 顶点。因此，可以重复此删除操作，直到图变成空的。
+最终按照顶点删除的顺序就可以得到一个 Topo Ordering.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd315748" class="outline-4">
+<h4 id="orgd315748">伪码</h4>
+<div class="outline-text-4" id="text-orgd315748">
+<div class="org-src-container">
+<pre class="src src-ruby">def get_topological_ordering_list(dag)
+  # result
+  topo = []
+  roots = []
+
+  #vertex_in_degree_count
+  in_count = {}
+
+  # 记录每个 vertex 的 in-degree(入边数)
+  dag.verticies.each do |vertex|
+    in_count[vertex] = vertex.in_degree
+    if vertex.in_degree == 0
+      roots.push(vertex);
+    end
+  end
+
+  ## 对应上面的 算法思路叙述
+  while roots.not_empty
+    u = roots.pop
+    topo.push(u)
+
+    u.outgoing_edges.each do |edge|
+      v = edge.opposite(u)
+      in_count[v] -= 1;
+      if (in_count[v] == 0)
+        roots.push(v);
+      end
+    end
+  end
+
+  return topo
+end
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -131,7 +185,7 @@ A spanning tree of a graph is a spanning subgraph that is a tree.
     <div>
       <div class="post-meta">
         <span title="post date" class="post-info">2020-01-07</span>
-        <span title="last modification date" class="post-info">2020-01-07</span>
+        <span title="last modification date" class="post-info">2020-01-08</span>
         <span title="tags" class="post-info"><a href="/tags/data-structures/">data-structures</a></span>
         <span title="author" class="post-info">melp</span>
       </div>
@@ -140,8 +194,8 @@ A spanning tree of a graph is a spanning subgraph that is a tree.
         <div id="disqus_thread"></div>
         <script type="text/javascript">
           //var disqus_developer = 1;
-          var disqus_identifier = "/blog/2010/01/07/basic-graph-algorithms";
-          var disqus_url = "https://evalwhen.github.io/blog/2010/01/07/basic-graph-algorithms";
+          var disqus_identifier = "/blog/2020/01/07/basic-graph-algorithms";
+          var disqus_url = "https://evalwhen.github.io/blog/2020/01/07/basic-graph-algorithms";
           var disqus_shortname = 'coolvimer';
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
