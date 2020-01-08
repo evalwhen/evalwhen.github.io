@@ -34,9 +34,9 @@
 <div>
 <div class="post">
 <h1>Transaction Isolation Level</h1>
-<div id="outline-container-org71e0b53" class="outline-2">
-<h2 id="org71e0b53">前言</h2>
-<div class="outline-text-2" id="text-org71e0b53">
+<div id="outline-container-org82f4e17" class="outline-2">
+<h2 id="org82f4e17">前言</h2>
+<div class="outline-text-2" id="text-org82f4e17">
 <p>
 最近再看数据库理论方面的书，在此写下我对事务隔离级别的理解。
 </p>
@@ -54,13 +54,13 @@
 </div>
 </div>
 
-<div id="outline-container-org06fcf8a" class="outline-2">
-<h2 id="org06fcf8a">四种隔离级别</h2>
-<div class="outline-text-2" id="text-org06fcf8a">
+<div id="outline-container-orgf690d4e" class="outline-2">
+<h2 id="orgf690d4e">四种隔离级别</h2>
+<div class="outline-text-2" id="text-orgf690d4e">
 </div>
-<div id="outline-container-orged7a196" class="outline-3">
-<h3 id="orged7a196">Read uncommitted.</h3>
-<div class="outline-text-3" id="text-orged7a196">
+<div id="outline-container-org84eb0d5" class="outline-3">
+<h3 id="org84eb0d5">Read uncommitted.</h3>
+<div class="outline-text-3" id="text-org84eb0d5">
 <p>
 事务可以读取到其他事务还未提交（commit) 的数据更改。
 </p>
@@ -84,9 +84,9 @@
 </div>
 </div>
 
-<div id="outline-container-org34d9f60" class="outline-3">
-<h3 id="org34d9f60">Read committed.</h3>
-<div class="outline-text-3" id="text-org34d9f60">
+<div id="outline-container-orgbbcbb2e" class="outline-3">
+<h3 id="orgbbcbb2e">Read committed.</h3>
+<div class="outline-text-3" id="text-orgbbcbb2e">
 <p>
 事务只能读取到其他事务已经提交了的更改。
 </p>
@@ -97,27 +97,27 @@
 </div>
 </div>
 
-<div id="outline-container-org93a7c12" class="outline-3">
-<h3 id="org93a7c12">Repeatable read.</h3>
-<div class="outline-text-3" id="text-org93a7c12">
+<div id="outline-container-org2a1f9ae" class="outline-3">
+<h3 id="org2a1f9ae">Repeatable read.</h3>
+<div class="outline-text-3" id="text-org2a1f9ae">
 <p>
 只存在 phantom read 副作用。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3cb7fd4" class="outline-3">
-<h3 id="org3cb7fd4">Serializable.</h3>
-<div class="outline-text-3" id="text-org3cb7fd4">
+<div id="outline-container-org9fd8b6c" class="outline-3">
+<h3 id="org9fd8b6c">Serializable.</h3>
+<div class="outline-text-3" id="text-org9fd8b6c">
 <p>
 不存在任何并发副作用。
 </p>
 </div>
 </div>
 
-<div id="outline-container-org00af51e" class="outline-3">
-<h3 id="org00af51e">参考资料</h3>
-<div class="outline-text-3" id="text-org00af51e">
+<div id="outline-container-orgda615ea" class="outline-3">
+<h3 id="orgda615ea">参考资料</h3>
+<div class="outline-text-3" id="text-orgda615ea">
 <ol class="org-ol">
 <li><a href="https://en.wikipedia.org/wiki/Isolation_(database_systems)#Phantom_reads">Isolation</a></li>
 <li><a href="https://book.douban.com/subject/10443458/">High Performance Mysql</a></li>
