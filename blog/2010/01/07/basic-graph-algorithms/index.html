@@ -34,76 +34,76 @@
 <div>
 <div class="post">
 <h1>Basic Graph Algorithms</h1>
-<div id="outline-container-org1331edd" class="outline-2">
-<h2 id="org1331edd">Graph data structure 表示</h2>
-<div class="outline-text-2" id="text-org1331edd">
+<div id="outline-container-orgdb86e5e" class="outline-2">
+<h2 id="orgdb86e5e">Graph data structure 表示</h2>
+<div class="outline-text-2" id="text-orgdb86e5e">
 </div>
-<div id="outline-container-orgc4738e2" class="outline-3">
-<h3 id="orgc4738e2">edge list</h3>
+<div id="outline-container-orgba881f3" class="outline-3">
+<h3 id="orgba881f3">edge list</h3>
 </div>
-<div id="outline-container-orgb8850ae" class="outline-3">
-<h3 id="orgb8850ae">adjacency list</h3>
+<div id="outline-container-org9a94885" class="outline-3">
+<h3 id="org9a94885">adjacency list</h3>
 </div>
-<div id="outline-container-org3caf52d" class="outline-3">
-<h3 id="org3caf52d">adjacency map</h3>
+<div id="outline-container-orgcffb453" class="outline-3">
+<h3 id="orgcffb453">adjacency map</h3>
 </div>
-<div id="outline-container-orgd2f4c65" class="outline-3">
-<h3 id="orgd2f4c65">adjacency matrix</h3>
+<div id="outline-container-orge882ca0" class="outline-3">
+<h3 id="orge882ca0">adjacency matrix</h3>
 </div>
 </div>
 
-<div id="outline-container-orgda8729d" class="outline-2">
-<h2 id="orgda8729d">Concepts about graph</h2>
-<div class="outline-text-2" id="text-orgda8729d">
+<div id="outline-container-org54e9299" class="outline-2">
+<h2 id="org54e9299">Concepts about graph</h2>
+<div class="outline-text-2" id="text-org54e9299">
 </div>
-<div id="outline-container-org7f75abe" class="outline-3">
-<h3 id="org7f75abe">Graph Is <i>Connected</i></h3>
-<div class="outline-text-3" id="text-org7f75abe">
+<div id="outline-container-org2d67b45" class="outline-3">
+<h3 id="org2d67b45">Graph Is <i>Connected</i></h3>
+<div class="outline-text-3" id="text-org2d67b45">
 <p>
 For any two vertices, there is a path between them.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcbb4bf1" class="outline-3">
-<h3 id="orgcbb4bf1">Graph H is the <i>subgraph</i> of Graph G</h3>
-<div class="outline-text-3" id="text-orgcbb4bf1">
+<div id="outline-container-orgb857fdf" class="outline-3">
+<h3 id="orgb857fdf">Graph H is the <i>subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-orgb857fdf">
 <p>
 The vertices and edges of Subgraph H are subsets of the vertices and edges of Graph G.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb2cccc0" class="outline-3">
-<h3 id="orgb2cccc0">Graph H is the <i>spanning subgraph</i> of Graph G</h3>
-<div class="outline-text-3" id="text-orgb2cccc0">
+<div id="outline-container-org9eab20e" class="outline-3">
+<h3 id="org9eab20e">Graph H is the <i>spanning subgraph</i> of Graph G</h3>
+<div class="outline-text-3" id="text-org9eab20e">
 <p>
 Subgraph H contains all vertices of graph G.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org60f685c" class="outline-3">
-<h3 id="org60f685c">Forest</h3>
-<div class="outline-text-3" id="text-org60f685c">
+<div id="outline-container-org661287e" class="outline-3">
+<h3 id="org661287e">Forest</h3>
+<div class="outline-text-3" id="text-org661287e">
 <p>
 Graph without cycles.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge40a0bc" class="outline-3">
-<h3 id="orge40a0bc">Tree</h3>
-<div class="outline-text-3" id="text-orge40a0bc">
+<div id="outline-container-orgda24b80" class="outline-3">
+<h3 id="orgda24b80">Tree</h3>
+<div class="outline-text-3" id="text-orgda24b80">
 <p>
 Connected graph without cycles.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org93eef97" class="outline-3">
-<h3 id="org93eef97">Spanning Tree</h3>
-<div class="outline-text-3" id="text-org93eef97">
+<div id="outline-container-org91121ea" class="outline-3">
+<h3 id="org91121ea">Spanning Tree</h3>
+<div class="outline-text-3" id="text-org91121ea">
 <p>
 A spanning tree of a graph is a spanning subgraph that is a tree.
 </p>
@@ -111,18 +111,18 @@ A spanning tree of a graph is a spanning subgraph that is a tree.
 </div>
 </div>
 
-<div id="outline-container-org2706e1e" class="outline-2">
-<h2 id="org2706e1e">Graph 相关算法</h2>
-<div class="outline-text-2" id="text-org2706e1e">
+<div id="outline-container-org94ea987" class="outline-2">
+<h2 id="org94ea987">Graph 相关算法</h2>
+<div class="outline-text-2" id="text-org94ea987">
 </div>
-<div id="outline-container-org80ced70" class="outline-3">
-<h3 id="org80ced70">Depth First Search</h3>
+<div id="outline-container-orgecdf75c" class="outline-3">
+<h3 id="orgecdf75c">Depth First Search</h3>
 </div>
-<div id="outline-container-org59ae9b4" class="outline-3">
-<h3 id="org59ae9b4">Breadth First Search</h3>
+<div id="outline-container-org171f09d" class="outline-3">
+<h3 id="org171f09d">Breadth First Search</h3>
 </div>
-<div id="outline-container-org461a554" class="outline-3">
-<h3 id="org461a554">Topological Ordering</h3>
+<div id="outline-container-orgd0e91da" class="outline-3">
+<h3 id="orgd0e91da">Topological Ordering</h3>
 </div>
 </div>
 
