@@ -6,7 +6,7 @@
 <!-- 2020-01-16 四 17:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Evalwhen Notes</title>
+<title>&lrm;</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="hujianfeng" />
 <style type="text/css">
@@ -195,6 +195,11 @@
 </style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -244,15 +249,153 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Evalwhen Notes</h1>
-<ul class="org-ul">
-<li><a href="data-structure.html">data-structure</a></li>
-<li><a href="database.html">database</a></li>
-<li><a href="linux.html">linux</a></li>
-<li><a href="mysql.html">mysql</a></li>
-<li><a href="org-mode.html">org-mode</a></li>
-<li><a href="redis.html">redis</a></li>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcb3d1f7">Special Dates</a></li>
+<li><a href="#orgfa402cd">Notes</a>
+<ul>
+<li><a href="#org4794bc1">Clocking time with Org-mode&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+<li><a href="#org310b761">如何估算任务完成时间&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+<li><a href="#org233f1a1">如何查看历史 clocked task.&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+<li><a href="#org3949fdb">Org-agenda: bulk refile tasks&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
 </ul>
+</li>
+<li><a href="#orgc539dc5">Tasks</a>
+<ul>
+<li><a href="#org4af54db"><span class="done DONE">DONE</span> learn clock method.&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_home">@home</span></span></a></li>
+<li><a href="#org0d8126f"><span class="done DONE">DONE</span> read organize your life with plain txt.</a></li>
+<li><a href="#orgeca5eaf"><span class="todo NEXT">NEXT</span> Study how publish org project</a></li>
+</ul>
+</li>
+<li><a href="#org404cb20">Passwords</a></li>
+<li><a href="#org115c465">Finances</a></li>
+<li><a href="#org2a99761">Health</a></li>
+<li><a href="#orgc996649">Parents</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcb3d1f7" class="outline-2">
+<h2 id="orgcb3d1f7">Special Dates</h2>
+</div>
+<div id="outline-container-orgfa402cd" class="outline-2">
+<h2 id="orgfa402cd">Notes</h2>
+<div class="outline-text-2" id="text-orgfa402cd">
+</div>
+<div id="outline-container-org4794bc1" class="outline-3">
+<h3 id="org4794bc1">Clocking time with Org-mode&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-org4794bc1">
+<p>
+<a href="https://writequit.org/denver-emacs/presentations/2017-04-11-time-clocking-with-org.html">link</a> 
+</p>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-11 六 18:23]</span></span>
+<a href="mysql.html#org523172a">Tasks</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org310b761" class="outline-3">
+<h3 id="org310b761">如何估算任务完成时间&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-org310b761">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-12 日 12:45]</span></span>
+</p>
+
+<ol class="org-ol">
+<li>org-columns:</li>
+</ol>
+<p>
+C-c C-x C-c 
+</p>
+<ol class="org-ol">
+<li>insert dynamic clock table:</li>
+</ol>
+<p>
+C-c C-x i RET
+</p>
+<ol class="org-ol">
+<li>export genda Clock Report:</li>
+</ol>
+<p>
+C-c C-w /tmp/agenda.txt RET
+</p>
+</div>
+</div>
+<div id="outline-container-org233f1a1" class="outline-3">
+<h3 id="org233f1a1">如何查看历史 clocked task.&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-org233f1a1">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-12 日 18:05]</span></span>
+</p>
+
+<p>
+C-u SPC m C I
+</p>
+</div>
+</div>
+<div id="outline-container-org3949fdb" class="outline-3">
+<h3 id="org3949fdb">Org-agenda: bulk refile tasks&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-org3949fdb">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-15 三 10:34]</span></span>
+<a href="database.html#org81f634a">Learn Database Design, general.</a>
+</p>
+
+<ol class="org-ol">
+<li>Tag tasks to be refiled with m collecting all tasks for the same target</li>
+<li>Bulk refile the tasks to the target location with B r</li>
+<li>Repeat (or refile individually with C-c C-w) until all refile tasks are gone</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc539dc5" class="outline-2">
+<h2 id="orgc539dc5">Tasks</h2>
+<div class="outline-text-2" id="text-orgc539dc5">
+</div>
+<div id="outline-container-org4af54db" class="outline-3">
+<h3 id="org4af54db"><span class="done DONE">DONE</span> learn clock method.&#xa0;&#xa0;&#xa0;<span class="tag"><span class="_home">@home</span></span></h3>
+<div class="outline-text-3" id="text-org4af54db">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-11 六 15:12]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org0d8126f" class="outline-3">
+<h3 id="org0d8126f"><span class="done DONE">DONE</span> read organize your life with plain txt.</h3>
+<div class="outline-text-3" id="text-org0d8126f">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-11 六 16:07]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-orgeca5eaf" class="outline-3">
+<h3 id="orgeca5eaf"><span class="todo NEXT">NEXT</span> Study how publish org project</h3>
+<div class="outline-text-3" id="text-orgeca5eaf">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-16 四 10:08]</span></span>
+</p>
+
+<p>
+主要是 notes 的发布
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org404cb20" class="outline-2">
+<h2 id="org404cb20">Passwords</h2>
+</div>
+<div id="outline-container-org115c465" class="outline-2">
+<h2 id="org115c465">Finances</h2>
+</div>
+<div id="outline-container-org2a99761" class="outline-2">
+<h2 id="org2a99761">Health</h2>
+</div>
+<div id="outline-container-orgc996649" class="outline-2">
+<h2 id="orgc996649">Parents</h2>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: hujianfeng</p>

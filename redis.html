@@ -6,7 +6,7 @@
 <!-- 2020-01-16 四 17:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Evalwhen Notes</title>
+<title>&lrm;</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="hujianfeng" />
 <style type="text/css">
@@ -195,6 +195,11 @@
 </style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -244,15 +249,170 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Evalwhen Notes</h1>
-<ul class="org-ul">
-<li><a href="data-structure.html">data-structure</a></li>
-<li><a href="database.html">database</a></li>
-<li><a href="linux.html">linux</a></li>
-<li><a href="mysql.html">mysql</a></li>
-<li><a href="org-mode.html">org-mode</a></li>
-<li><a href="redis.html">redis</a></li>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgab85d64">Tasks</a>
+<ul>
+<li><a href="#orgf403f2a"><span class="done DONE">DONE</span> Redis pub/sub data-structure <code>[1/2]</code></a></li>
+<li><a href="#orgdcbba31"><span class="done DONE">DONE</span> Learn HyperLogLog</a></li>
+<li><a href="#org2182126"><span class="todo NEXT">NEXT</span> Redis 面试题目</a></li>
 </ul>
+</li>
+<li><a href="#org96fc757">Notes</a>
+<ul>
+<li><a href="#orge3bd74a">HyperLogLog&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+<li><a href="#org07483eb">Redis pub/sub&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+<li><a href="#orga6a4ecb">常见面试题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org0690815">Interviews</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgab85d64" class="outline-2">
+<h2 id="orgab85d64">Tasks</h2>
+<div class="outline-text-2" id="text-orgab85d64">
+</div>
+<div id="outline-container-orgf403f2a" class="outline-3">
+<h3 id="orgf403f2a"><span class="done DONE">DONE</span> Redis pub/sub data-structure <code>[1/2]</code></h3>
+<div class="outline-text-3" id="text-orgf403f2a">
+<ul class="org-ul">
+<li>State "TODO"       from "HOLD"       <span class="timestamp-wrapper"><span class="timestamp">[2020-01-16 四 12:00]</span></span></li>
+<li>State "HOLD"       from "NEXT"       <span class="timestamp-wrapper"><span class="timestamp">[2020-01-15 三 09:57] </span></span> <br />
+redis<sub>pubsub</sub><sub>demo</sub> 不能正常运行，通过单步调试以后发现，redis-server 会主动关闭连接，
+但不知到为什么。</li>
+</ul>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-13 一 21:10]</span></span>
+<a href="todo.html#orgcbb7775">Organization</a>
+</p>
+
+<ul class="org-ul">
+<li class="on"><code>[X]</code> read doc</li>
+<li class="off"><code>[&#xa0;]</code> study <a href="https://gist.github.com/evalwhen/5f95cbb344b8d1734725009719d1ccca">redis<sub>pubsub</sub><sub>demo.rb</sub></a></li>
+</ul>
+
+<p>
+<a href="https://redis.io/topics/pubsub">source</a> 
+</p>
+</div>
+</div>
+<div id="outline-container-orgdcbba31" class="outline-3">
+<h3 id="orgdcbba31"><span class="done DONE">DONE</span> Learn HyperLogLog</h3>
+<div class="outline-text-3" id="text-orgdcbba31">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-13 一 20:27]</span></span>
+</p>
+</div>
+</div>
+<div id="outline-container-org2182126" class="outline-3">
+<h3 id="org2182126"><span class="todo NEXT">NEXT</span> Redis 面试题目</h3>
+<div class="outline-text-3" id="text-org2182126">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-15 三 10:08]</span></span>
+<a href="mysql.html#org39da433">Optimize Schema and Data Types</a>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/AobingJava/JavaFamily/tree/master/docs/redis">参考资料</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org96fc757" class="outline-2">
+<h2 id="org96fc757">Notes</h2>
+<div class="outline-text-2" id="text-org96fc757">
+</div>
+<div id="outline-container-orge3bd74a" class="outline-3">
+<h3 id="orge3bd74a">HyperLogLog&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-orge3bd74a">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-13 一 20:43]</span></span>
+<a href="todo.html#orgcbb7775">Organization</a>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/questions/12327004/how-does-the-hyperloglog-algorithm-work">resource</a></li>
+<li>A HyperLogLog is a probabilistic data structure.</li>
+</ul>
+<p>
+It counts the number of distinct elements in a list.
+But in comparison to a straightforward way of doing it 
+(having a set and adding elements to the set) it does this in an approximate way.
+</p>
+
+<ul class="org-ul">
+<li>The HyperLogLog data structure can be used in order to count unique elements 
+in a set using just a small constant amount of memory, specifically 12k bytes for every HyperLogLog 
+(plus a few bytes for the key itself).</li>
+
+<li><a href="https://redis.io/commands/pfcount">redis-pfcount</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org07483eb" class="outline-3">
+<h3 id="org07483eb">Redis pub/sub&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-org07483eb">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-15 三 09:59]</span></span>
+</p>
+
+<ul class="org-ul">
+<li>不同的客户端通过订阅（subscribe) 和 发布(publish) 相同的频道（channel)，
+实现异步通信，订阅方和发布方相互没有关联，订阅方只会收到自己订阅过的 channel 的
+消息。</li>
+<li>使用 pub/sub 有个缺点就是，当消费者取消订阅后的消息是会丢失的。</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga6a4ecb" class="outline-3">
+<h3 id="orga6a4ecb">常见面试题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NOTE">NOTE</span></span></h3>
+<div class="outline-text-3" id="text-orga6a4ecb">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2020-01-15 三 20:00]</span></span>
+</p>
+
+<p>
+这里只提一下，不知道去查询
+</p>
+
+<ul class="org-ul">
+<li><p>
+缓存雪崩以及应对方案
+</p>
+
+<p>
+同一时间 Key 大面积失效，导致请求直接越过 redis 至数据库。
+应对：在批量往Redis存数据的时候，把每个Key的失效时间都加个随机值, 避免大量 key 的失效时间一样
+</p></li>
+
+<li><p>
+缓存穿透以及应对方案
+</p>
+
+<p>
+攻击者对缓存和数据库中都不存在的数据进行请求， 比如 id = -1。
+应定：在接口或者网关层面对参数进行验证。
+</p></li>
+
+<li><p>
+缓存击穿以及应对方案
+</p>
+
+<p>
+大并发请求对某个热点 key 进行请求，在大并发持续时间内，该热点 key 失效, 穿透缓存直接到数据库
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0690815" class="outline-2">
+<h2 id="org0690815">Interviews</h2>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: hujianfeng</p>
