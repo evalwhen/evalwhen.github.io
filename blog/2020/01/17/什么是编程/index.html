@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>什么是编程 - Melp</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="hujianfeng" />
+    <meta name="description" content="programing think" />
+    <meta name="keywords" content="&lt;TODO: insert your keywords here&gt;" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/media/css/prettify.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/media/img/favicon.ico">
+
+  </head>
+
+  <body class="container">
+    <div>
+      <header class="masthead">
+        <h1 class="masthead-title"><a href="/">Melp</a></h1>
+        <p>Learn By Doing</p>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="https://github.com/evalwhen" target="_blank">GitHub</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+        </ul>
+        <form method="get" id="searchform" action="//www.google.com/search">
+          <input type="text" class="field" name="q" id="s" placeholder="Search">
+          <input type="hidden" name="as_sitesearch" value="evalwhen.github.io">
+        </form>
+      </header>
+    </div>
+
+<div>
+<div class="post">
+<h1>什么是编程</h1>
+<p>
+到底什么是编程? 或者说编程在做什么。
+编程在表达计算。什么是计算，举个例子：请计算出 5 的阶乘。
+啊哈，简单。5! = 5 * 4! = 5 * 4 * 3! ......
+如果数字大一点，算起来好麻烦，要是有一个计算器或者什么机器，输入一个正整数，输出它的阶乘就方便了。
+我们可以设计这样一台机器，就叫 factorial 吧，这台机器的描述如下，
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme">(define (factorial n)
+ (if (= n 0)
+     1
+     (* n (factorial (- n 1)))))
+</pre>
+</div>
+
+<p>
+如果我们输入 n ,然后按照它的描述来计算 5！，计算过程和上面如出一辙。
+</p>
+
+<p>
+但是有个问题，如果上面 else 中使用的是同一台机器，那么在没有计算出 n! 之前它又去计算 （n-1)!
+这样永远都得不到结果。如果使用了另外一台机器计算 n - 1 的阶乘, 然后将 n 乘 (n-1)!, 就得到了结果。
+意思就是说，如果我要计算5！，那么我就得有 四个机器分别计算 4!，3!，2!, 1！
+</p>
+
+<p>
+WTF, 这样设计不行啊。在想想办法，试试下面的。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme">(define (factorial/i n v)
+  (if (= n 0)
+      v
+      (factorial/i (- n 1) (* n v))))
+</pre>
+</div>
+
+<p>
+咋一看，好像还是之前的问题。但是仔细看一下，发现这台机器每次在重复调用自己的是时候，都输入了不同的参数，
+然后抛弃了之前的计算。也就是说 (factorial/i 5 1）是在计算 5!, (factorial/i 4 5) = (factorial/i 3 20)
+等等也是在计算 n!。这样说好像很抽象。我们具体一点。
+</p>
+
+<p>
+假设有这样一台机器 FACT，它有两个寄存器n, v 再加一个临时寄存器 t; 有一个减法器 -；有一个加法器 *; 最后加一个。我们可以这样计算 5！
+</p>
+
+<p>
+设置寄存器初始值。
+5 -&gt; n
+1 -&gt; v
+</p>
+
+<p>
+然后开始计算
+</p>
+<blockquote>
+<p>
+loop:
+ zero? n       ;; 判断寄存器 n 的值是否为零
+ jump end      ;; 如果 n = 0, 计算完毕
+ (- n 1) -&gt; n  ;; 设置寄存器 n 的值为旧值减去 1
+ (* n v) -&gt; v  ;; 设置寄存器 v 的值为 n * v
+ jump loop     ;; 继续计算
+end:
+ v             ;; 最终寄存器 v 保存了最终的计算结果（n!)。
+</p>
+</blockquote>
+
+<p>
+这样简单的重复设置寄存器，直到寄存器 n 变成 0。最终 v 里面就是 5 的阶乘（120）。
+</p>
+
+<p>
+这样我们就将抽象的计算具体化成现实中可以实现的机器 FACT。
+</p>
+
+
+<p>
+所以，到底什么是编程。
+编程是在写程序。什么是程序？
+那么，请编写一个计算 n! 的程序
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme">(define (fact n)
+  (factorial/i n 1))
+
+(define (factorial/i n v)
+  (if (= n 0)
+      v
+      (factorial/i (- n 1) (* n v))))
+
+ (fact (read n))
+ 5 -&gt; n
+ (fact 5) _______ 120
+</pre>
+</div>
+
+<p>
+之前我们通过将 factorial/i 参数看作是寄存器设计了一台计算级数的机器 FACT。
+所以,程序 factorial/i 实际上就是对机器 FACT 的描述，这台机器只能计算 n!。
+最终，程序是机器的描述。
+</p>
+
+<p>
+这样以来，解释器也是一个程序，解释器也是对某个机器的描述。如果某个解释器可以解释
+所有表达特定计算的程序，那么它描述的机器就可以计算一切可计算的东西。
+东西？啊哈。这不就是图灵机？
+</p>
+
+</div>
+</div>
+    <div>
+      <div class="post-meta">
+        <span title="post date" class="post-info">2020-02-17</span>
+        <span title="last modification date" class="post-info">2020-02-17</span>
+        <span title="tags" class="post-info"><a href="/tags/programming/">programming</a>, <a href="/tags/computation/">computation</a></span>
+        <span title="author" class="post-info">hujianfeng</span>
+      </div>
+      <section>
+        <h1>Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          //var disqus_developer = 1;
+          var disqus_identifier = "/blog/2020/01/17/什么是编程";
+          var disqus_url = "https://evalwhen.github.io/blog/2020/01/17/什么是编程";
+          var disqus_shortname = 'coolvimer';
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+      <script src="//code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="/media/js/main.js"></script>
+      <div class="footer">
+        <p>Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 26.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+        <p>
+          Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:hujianfeng &lt;at&gt; hujianfeng-pc">hujianfeng</a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;
+          Powered by <a href="https://github.com/kelvinh/org-page" target="_blank">org-page</a>
+          <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>
