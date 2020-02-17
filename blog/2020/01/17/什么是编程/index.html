@@ -91,9 +91,8 @@ WTF, 这样设计不行啊。在想想办法，试试下面的。
 <p>
 然后开始计算
 </p>
-<blockquote>
-<p>
-loop:
+<div class="org-src-container">
+<pre class="src src-scheme">loop:
  zero? n       ;; 判断寄存器 n 的值是否为零
  jump end      ;; 如果 n = 0, 计算完毕
  (- n 1) -&gt; n  ;; 设置寄存器 n 的值为旧值减去 1
@@ -101,8 +100,8 @@ loop:
  jump loop     ;; 继续计算
 end:
  v             ;; 最终寄存器 v 保存了最终的计算结果（n!)。
-</p>
-</blockquote>
+</pre>
+</div>
 
 <p>
 这样简单的重复设置寄存器，直到寄存器 n 变成 0。最终 v 里面就是 5 的阶乘（120）。
