@@ -73,8 +73,8 @@ WTF, 这样设计不行啊。在想想办法，试试下面的。
 </div>
 
 <p>
-咋一看，好像还是之前的问题。但是仔细看一下，发现这台机器每次在重复调用自己的是时候，都输入了不同的参数，
-然后抛弃了之前的计算。也就是说 (factorial/i 5 1）是在计算 5!, (factorial/i 4 5) = (factorial/i 3 20)
+咋一看，好像还是之前的问题。但是仔细看一下，发现这台机器每次在重复执行的时候，都输入了不同的参数，
+然后抛弃了之前的计算结果。也就是说 (factorial/i 5 1）是在计算 5!, (factorial/i 4 5), (factorial/i 3 20).....
 等等也是在计算 n!。这样说好像很抽象。我们具体一点。
 </p>
 
@@ -99,42 +99,35 @@ WTF, 这样设计不行啊。在想想办法，试试下面的。
  (* n v) -&gt; v  ;; 设置寄存器 v 的值为 n * v
  jump loop     ;; 继续计算
 end:
- v             ;; 最终寄存器 v 保存了最终的计算结果（n!)。
+ v             ;; 寄存器 v 保存了最终的计算结果（n!)。
 </pre>
 </div>
-
-<p>
-这样简单的重复设置寄存器，直到寄存器 n 变成 0。最终 v 里面就是 5 的阶乘（120）。
-</p>
 
 <p>
 这样我们就将抽象的计算具体化成现实中可以实现的机器 FACT。
 </p>
 
-
 <p>
-所以，到底什么是编程。
+所以，到底什么是编程?
 编程是在写程序。什么是程序？
 那么，请编写一个计算 n! 的程序
 </p>
 
 <div class="org-src-container">
-<pre class="src src-scheme">(define (fact n)
-  (factorial/i n 1))
+<pre class="src src-scheme">  (define (fact n)
+    (factorial/i n 1))
 
-(define (factorial/i n v)
-  (if (= n 0)
-      v
-      (factorial/i (- n 1) (* n v))))
+  (define (factorial/i n v)
+    (if (= n 0)
+        v
+        (factorial/i (- n 1) (* n v))))
 
- (fact (read n))
- 5 -&gt; n
- (fact 5) _______ 120
+(fact 5) ;;120
 </pre>
 </div>
 
 <p>
-之前我们通过将 factorial/i 参数看作是寄存器设计了一台计算级数的机器 FACT。
+之前我们将 factorial/i 参数看作是寄存器, 设计了一台计算级数的机器 FACT。
 所以,程序 factorial/i 实际上就是对机器 FACT 的描述，这台机器只能计算 n!。
 最终，程序是机器的描述。
 </p>
